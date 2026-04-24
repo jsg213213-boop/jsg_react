@@ -1,0 +1,4 @@
+# 각 리액트 프로젝트 내부의 node_modules 깃 목록에서 제외
+**/node_modules
+# 각 프로젝트에서 build 폴더 제외
+**/build
