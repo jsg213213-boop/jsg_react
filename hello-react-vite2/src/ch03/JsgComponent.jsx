@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const jsgComponent = ({ name, children, favoriteTVShow }) => {
     return (

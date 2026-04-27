@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class Counter extends Component {
   // 상태(state) 초기값 설정
