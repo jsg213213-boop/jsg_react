@@ -7,6 +7,7 @@ class EventPractice extends Component {
     return (
       <div>
         <h1>이벤트 연습</h1>
+        <h3>message : {this.state.message}</h3>
         <input
           type="text"
           name="message"
