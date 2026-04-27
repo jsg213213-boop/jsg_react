@@ -4,8 +4,8 @@ const Say = () => {
   const [message, setMessage] = useState('Say 컴포넌트 동작 중');
   const [color, setColor] = useState('black');
 
-  const onClickEnter = () => setMessage('안녕하세요!');
-  const onClickLeave = () => setMessage('안녕히 가세요!');
+  const onClickEnter = () => setMessage('어서오세요!');
+  const onClickLeave = () => setMessage('안녕히가세요!');
 
   return (
     <div>
