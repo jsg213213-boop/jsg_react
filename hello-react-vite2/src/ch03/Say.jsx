@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Say = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('Say 컴포넌트 동작 중');
   const [color, setColor] = useState('black');
 
   const onClickEnter = () => setMessage('안녕하세요!');
