@@ -18,7 +18,7 @@ function App() {
         <div>
           <h1>Get started</h1>
           <h2>jsg test</h2>
-          <h3>오늘 점심:새우돌솥비빔밥\</h3>
+          <h3>오늘 점심:새우돌솥비빔밥</h3>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
