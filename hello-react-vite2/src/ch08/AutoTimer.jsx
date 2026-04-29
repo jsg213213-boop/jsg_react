@@ -4,22 +4,20 @@ const AutoTimer = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    // 1초마다 count를 1씩 증가시키는 타이머 설정
+    // 타이머 함수를 정의
     const interval = setInterval(() => {
-      // 함수형 업데이트를 사용하여 이전 state 값을 정확히 참조
-      setCount(prevCount => prevCount + 1);
+      setCount((prev) => prev + 1);
     }, 1000);
 
-    // 언마운트 시 실행될 Cleanup 함수
+    // cleanup 함수 자리.
     return () => {
-      console.log('타이머가 종료되었습니다.');
-      clearInterval(interval);
+      clearInterval(interval); // 언마운트 시 타이머 정리
     };
-  }, []); // 마운트될 때 타이머 시작, 언마운트될 때 정리
+  }, []);
 
   return (
     <div>
-      <h3>자동 타이머: {count}초</h3>
+      <h3>경과 시간 : {count}</h3>
     </div>
   );
 };
