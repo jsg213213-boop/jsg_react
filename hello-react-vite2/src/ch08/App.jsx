@@ -8,7 +8,8 @@ import AutoTimer from "./AutoTimer";
 import CounterReducer from "./CounterReducer";
 import AdvancedCounter from "./AdvancedCounter";
 import Todo from "./Todo";
-
+import GetAverage from "./GetAverage";
+import MaxCompare from "./Maxcare";
 
 const App = () => {
     const [isShowing, setIsShowing] = useState(true);
@@ -39,6 +40,10 @@ const App = () => {
       <AdvancedCounter></AdvancedCounter>
       <h3>Todo 추가/삭제</h3>
       <Todo></Todo>
+      <h3>평균값</h3>
+      <GetAverage></GetAverage>
+      <h3>최댓값</h3>
+      <MaxCompare></MaxCompare> 
     </div>
     );
 };
