@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import Counter from "./Counter";
 import Info from "./Info";
 import Counter2 from "./Counter2";
 import InfoForm from "./InfoForm";
 import MountLog from "./MountLog";
 import AutoTimer from "./AutoTimer";
+import CounterReducer from "./CounterReducer";
+import AdvancedCounter from "./AdvancedCounter";
+import Todo from "./Todo";
+
 
 const App = () => {
+    const [isShowing, setIsShowing] = useState(true);
+
     return (
         <div>
             <h1>ch08 연습용</h1>
@@ -21,7 +28,18 @@ const App = () => {
             <MountLog></MountLog>
             <h3>AutoTimer</h3>
             <AutoTimer></AutoTimer>
-        </div>
+            <h3>AutoTimer언마운트 테스트 </h3>
+          <button onClick={() => setIsShowing(!isShowing)}>
+        {isShowing ? '타이머 컴포넌트 숨기기' : '타이머 컴포넌트 보이기'}
+      </button>
+      {isShowing && <AutoTimer />}
+      <h3>CounterReducer</h3>
+      <CounterReducer></CounterReducer>
+      <h3>AdvancedCounter</h3>
+      <AdvancedCounter></AdvancedCounter>
+      <h3>Todo 추가/삭제</h3>
+      <Todo></Todo>
+    </div>
     );
 };
 
