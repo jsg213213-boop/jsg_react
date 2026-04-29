@@ -7,6 +7,7 @@ const Counter2 = () => {
       <p>현재 카운터 값은 <b>{value}</b>입니다.</p>
       <button onClick={() => setValue(value + 2)}>+2</button>
       <button onClick={() => setValue(value - 2)}>-2</button>
+      <button onClick={() => setValue(value * 0)}>초기화</button>
     </div>
   );
 };
