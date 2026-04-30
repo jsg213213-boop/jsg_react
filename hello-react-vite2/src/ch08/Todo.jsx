@@ -3,7 +3,7 @@ import { useReducer } from 'react';
 // 1. 초기값 정의
 const initialState = {
   names: [
-    { id: 1, text: '풍운' },
+    { id: 1, text: '삼국기' },
     { id: 2, text: '찬란한여명' },
     { id: 3, text: '용의눈물' },
     { id: 4, text: '왕과비' },
