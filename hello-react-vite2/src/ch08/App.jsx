@@ -15,6 +15,8 @@ import Counter3 from "./handleIncrease";
 import GetAverage3 from './getAverage3';
 import TextInputFocus from './TextInputfocus';
 import RenderCounter from './RenderCounter';
+import Ex1 from './Ex1';
+import EX2 from './Ex2';
 
 const App = () => {
     const [isShowing, setIsShowing] = useState(true);
@@ -59,6 +61,10 @@ const App = () => {
       <TextInputFocus></TextInputFocus>
       <h3>RenderCounter</h3>
       <RenderCounter></RenderCounter>
+      <h3>실습 useToggle </h3>
+      <Ex1></Ex1>
+      <h3>실습 useLocalStorage </h3>
+      <EX2></EX2>
     </div>
     );
 };
