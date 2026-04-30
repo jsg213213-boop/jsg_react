@@ -11,6 +11,7 @@ import Todo from "./Todo";
 import GetAverage from "./GetAverage";
 import MaxCompare from "./Maxcare";
 import GetAverage2 from "./getAverage2";
+import Counter3 from "./handleIncrease";
 
 const App = () => {
     const [isShowing, setIsShowing] = useState(true);
@@ -47,6 +48,8 @@ const App = () => {
       <MaxCompare></MaxCompare> 
       <h3>평균값2</h3>
       <GetAverage2></GetAverage2>
+      <h3>handleIncrease</h3>
+      <Counter3></Counter3>
     </div>
     );
 };
