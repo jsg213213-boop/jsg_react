@@ -10,6 +10,7 @@ import AdvancedCounter from "./AdvancedCounter";
 import Todo from "./Todo";
 import GetAverage from "./GetAverage";
 import MaxCompare from "./Maxcare";
+import GetAverage2 from "./getAverage2";
 
 const App = () => {
     const [isShowing, setIsShowing] = useState(true);
@@ -44,6 +45,8 @@ const App = () => {
       <GetAverage></GetAverage>
       <h3>최댓값</h3>
       <MaxCompare></MaxCompare> 
+      <h3>평균값2</h3>
+      <GetAverage2></GetAverage2>
     </div>
     );
 };
