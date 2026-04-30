@@ -3,13 +3,32 @@ import { useReducer } from 'react';
 // 1. 초기값 정의
 const initialState = {
   names: [
-    { id: 1, text: '눈사람' },
-    { id: 2, text: '얼음' },
-    { id: 3, text: '눈' },
-    { id: 4, text: '바람' },
+    { id: 1, text: '풍운' },
+    { id: 2, text: '찬란한여명' },
+    { id: 3, text: '용의눈물' },
+    { id: 4, text: '왕과비' },
+    { id: 5, text: '여인천하' },
+    { id: 6, text: '태조왕건' },
+    { id: 7, text: '제국의아침' },
+    { id: 8, text: '명성황후' },
+    { id: 9, text: '무인시대' },
+    { id: 10, text: '연개소문' },
+    { id: 11, text: '대왕세종' }, 
+    { id: 12, text: '이산' },
+    { id: 13, text: '계백' },
+    { id: 14, text: '근초고왕' },
+    { id: 15, text: '광개토태왕' },
+    { id: 16, text: '대왕의꿈' },
+    { id: 17, text: '징비록' },
+    { id: 18, text: '인수대비' },
+    { id: 19, text: '불멸의이순신' },
+    { id: 20, text: '정도전' },
+    { id: 21, text: '대조영' },
+    { id: 22, text: '고려거란전쟁' },
+    { id: 23, text: '태종이방원' }
   ],
   inputText: '',
-  nextId: 5,
+  nextId: 23,
   deletedItems: [],
 };
 
