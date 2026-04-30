@@ -12,6 +12,9 @@ import GetAverage from "./GetAverage";
 import MaxCompare from "./Maxcare";
 import GetAverage2 from "./getAverage2";
 import Counter3 from "./handleIncrease";
+import GetAverage3 from './getAverage3';
+import TextInputFocus from './TextInputfocus';
+import RenderCounter from './RenderCounter';
 
 const App = () => {
     const [isShowing, setIsShowing] = useState(true);
@@ -50,6 +53,12 @@ const App = () => {
       <GetAverage2></GetAverage2>
       <h3>handleIncrease</h3>
       <Counter3></Counter3>
+      <h3>평균값3</h3>
+      <GetAverage3></GetAverage3>
+      <h3>TextInputFocus</h3>
+      <TextInputFocus></TextInputFocus>
+      <h3>RenderCounter</h3>
+      <RenderCounter></RenderCounter>
     </div>
     );
 };
