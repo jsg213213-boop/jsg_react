@@ -38,7 +38,7 @@ const App = () => {
       <CounterReducer></CounterReducer>
       <h3>AdvancedCounter</h3>
       <AdvancedCounter></AdvancedCounter>
-      <h3>Todo 추가/삭제</h3>
+      <h3>Todo 사극 리스트 추가/삭제</h3>
       <Todo></Todo>
       <h3>평균값</h3>
       <GetAverage></GetAverage>
