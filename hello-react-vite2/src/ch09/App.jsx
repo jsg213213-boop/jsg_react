@@ -9,7 +9,7 @@ const App = () => (
       <p>Hello React!</p>
     </header>
     <h1> ch09 React 스타일링 예시</h1>
-    <h2>Pracice</h2>
+    <h2>Practice</h2>
     <Practice></Practice>
   </div>
 );
