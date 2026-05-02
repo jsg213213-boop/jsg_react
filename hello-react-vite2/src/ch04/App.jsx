@@ -7,7 +7,7 @@ import ValidationSample from '../ch05/ValidationSample';
 const App = () => {
     return (
         <div>
-            <h1>ch04 App</h1>
+            <h1>ch04 연습용</h1>
             <EventPractice>이벤트 작엄 중</EventPractice>
             <h2>ch04 App</h2>
             <EventPractice2>이벤트 작엄 중</EventPractice2>
