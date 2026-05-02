@@ -2,13 +2,32 @@ import { useState } from 'react';
 
 const IterationSample = () => {
   const [names, setNames] = useState([
-    { id: 1, text: '눈사람' },
-    { id: 2, text: '얼음' },
-    { id: 3, text: '눈' },
-    { id: 4, text: '바람' },
+    { id: 1, text: '잠실롯데월드' },
+    { id: 2, text: '성수동골목' },
+    { id: 3, text: '여의도공원' },
+    { id: 4, text: '북서울꿈의숲' },
+    { id: 5, text: '잠실올림픽공원' },
+    { id: 6, text: '남대문시장' },
+    { id: 7, text: '석촌호수' },
+    { id: 8, text: '상암월드컵공원광장' },
+    { id: 9, text: '동대문시장' },
+    { id: 10, text: '인사동골목' },
+    { id: 11, text: '홍대젊음의골목' },
+    { id: 12, text: '명동젊음의거리' },
+    { id: 13, text: '반포한강공원' },
+    { id: 14, text: '창덕궁' },
+    { id: 15, text: '덕수궁' },
+    { id: 16, text: '경복궁' },
+    { id: 17, text: '청계천' },
+    { id: 18, text: '용산전쟁기념관' },
+    { id: 19, text: '북촌한옥마을' },
+    { id: 20, text: '홍제카페폭포' },
+    { id: 21, text: '신도림테크노마트하늘공원' },
+    { id: 22, text: '광화문세종문화회관' },
+    { id: 23, text: '예술의전당' },
   ]);
   const [inputText, setInputText] = useState('');
-  const [nextId, setNextId] = useState(5);
+  const [nextId, setNextId] = useState(24);
 
   // 오름차순, 내림차순 정렬 기능
   // 순서1
@@ -16,8 +35,8 @@ const IterationSample = () => {
   const sortAsscending = () => {
     // 복제한 배열을 이용해서, 정렬 후, 교체 작업 할 예정.
     //(a, b) => a.text.localeCompare(b.text)
-    // a => 첫번째 요소의 객체  { id: 1, text: '눈사람' },
-    // b => 두번째 요소의 객체  { id: 2, text: '얼음' },
+    // a => 첫번째 요소의 객체  { id: 1, text: '서울특별시' },
+    // b => 두번째 요소의 객체  { id: 2, text: '잠실롯데월드' },
     // localeCompare, a 요소 와 b 요소를 비교해서,
     // 양수(0보다크면), a 가 b보다 뒤에 있음.
     // 0 , a , b 같은 자리.
