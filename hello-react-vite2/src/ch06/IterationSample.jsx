@@ -10,7 +10,7 @@ const IterationSample = () => {
     { id: 6, text: '석촌호수' },
     { id: 7, text: '상암월드컵공원광장' },
     { id: 8, text: '동대문시장' },
-    { id: 9, text: '인사동골목' },
+    { id: 9, text: '종로인사동골목' },
     { id: 10, text: '홍대젊음의골목' },
     { id: 11, text: '명동먹거리' },
     { id: 12, text: '반포한강공원' },
