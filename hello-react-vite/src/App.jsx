@@ -18,7 +18,7 @@ function App() {
         <div>
           <h1>Get started</h1>
           <h2>jsg test</h2>
-          <h3>좋아하는 최애 걸그룹:우주소녀</h3>
+          <h3>성규 생년월일:1992-02-13</h3>
           <h3>성규 이메일 주소:jsg213213@naver.com</h3>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
