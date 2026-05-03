@@ -45,8 +45,8 @@ const IterationSample = () => {
   const sortAsscending = () => {
     // 복제한 배열을 이용해서, 정렬 후, 교체 작업 할 예정.
     //(a, b) => a.text.localeCompare(b.text)
-    // a => 첫번째 요소의 객체  { id: 1, text: '서울특별시' },
-    // b => 두번째 요소의 객체  { id: 2, text: '잠실롯데월드' },
+    // a => 첫번째 요소의 객체  { id: 1, text: '잠실롯데월드' },
+    // b => 두번째 요소의 객체  { id: 2, text: '성수동골목' },
     // localeCompare, a 요소 와 b 요소를 비교해서,
     // 양수(0보다크면), a 가 b보다 뒤에 있음.
     // 0 , a , b 같은 자리.
