@@ -25,9 +25,19 @@ const IterationSample = () => {
     { id: 21, text: '신도림테크노마트하늘공원' },
     { id: 22, text: '광화문세종문화회관' },
     { id: 23, text: '예술의전당' },
+    { id: 24, text: '잠실올림픽공원' },
+    { id: 25, text: '서울역광장' },
+    { id: 26, text: '현대백화점압구정점본점' },
+    { id: 27, text: '신셰계백화점명동본점'}, 
+    { id: 28, text: '롯데백화점명동본점' },
+    { id: 29, text: '신당동떡볶이골목' },
+    { id: 30, text: '옛서울역박물관' },
+    { id: 31, text: '동작국립현충원' },
+    { id: 32, text: '이수역사거리' },
+    { id: 33, text: '사당역골목' },
   ]);
   const [inputText, setInputText] = useState('');
-  const [nextId, setNextId] = useState(24);
+  const [nextId, setNextId] = useState(34);
 
   // 오름차순, 내림차순 정렬 기능
   // 순서1
