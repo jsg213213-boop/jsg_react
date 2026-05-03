@@ -34,7 +34,7 @@ const IterationSample = () => {
     { id: 30, text: '옛서울역역사박물관' },
     { id: 31, text: '동작역국립현충원' },
     { id: 32, text: '이수역사거리시장골목' },
-    { id: 33, text: '사당역골목' },
+    { id: 33, text: '사당역사거리골목' },
   ]);
   const [inputText, setInputText] = useState('');
   const [nextId, setNextId] = useState(34);
