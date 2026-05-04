@@ -17,13 +17,13 @@ const Practice = () => {
           className="card__button" 
           onClick={() => setValue(value + 2)}
         >
-          +2
+          +1
         </button>
         <button 
           className="card__button" 
           onClick={() => setValue(value - 2)}
         >
-          -2
+          -1
         </button>
         <button 
           className="card__button" 
