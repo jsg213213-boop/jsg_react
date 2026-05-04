@@ -5,6 +5,8 @@ import Ex1 from './Ex1';
 import Ex2 from './Ex2';
 import SassEx1 from './SassEx1';
 import SassComponent from './SassComponent';
+import ButtonGroup from './ButtonGroup';
+import Navbar from './Navbar';
 const App = () => (
   <div className="App">
     <header>
@@ -30,6 +32,10 @@ const App = () => (
     <h2>Sass 예제2</h2>
     <p>공통 util.scss 에서 만든 내용을 SassComponent.scss 활용 연습 확인.</p>
     <SassComponent></SassComponent>
+    <h2>실습2-1</h2>
+  <ButtonGroup></ButtonGroup>
+    <h2>실습2-2</h2>
+      <Navbar></Navbar>
   </div>
   
 );

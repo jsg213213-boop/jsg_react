@@ -1,0 +1,45 @@
+$nav-bg: #343842;
+$nav-color: #b1bbcb;
+$nav-active : #5fd6f7;
+
+.Navbar {
+    background: $nav-bg;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    .nav-brand {
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-left: 2rem;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        // margin: 0;
+        margin-left: auto;
+        padding-right: 30px;
+        gap: 1rem;
+
+        .nav-item {
+            a {
+                color: $nav-color;
+                text-decoration: none;
+                padding: 0.4rem 0;
+                transition: color 0.2s;
+
+                &:hover { color: white;}
+
+                &.active {
+                    color: $nav-active;
+                    border-bottom: 2px solid $nav-active;
+                }
+            }
+        }
+    }
+
+
+}
