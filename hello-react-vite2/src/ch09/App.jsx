@@ -54,8 +54,8 @@ const App = () => (
     <p>CSSModule 를 이용한 자동 클래스명 생성 예시</p>
     <CSSModule></CSSModule>
     <h3>실습3-1:Badge 컴포넌트</h3>
-      <Badge type="success">성공</Badge>{' '}
-      <Badge type="warning">경고</Badge>{' '}
+      <Badge type="success">성공</Badge>
+      <Badge type="warning">경고</Badge>
       <Badge type="error">오류</Badge>
 
       <hr />
