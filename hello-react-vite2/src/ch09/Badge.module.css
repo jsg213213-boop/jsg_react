@@ -1,0 +1,21 @@
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* type prop에 따라 적용될 클래스들 */
+.success {
+  background-color: #28a745;
+}
+
+.warning {
+  background-color: #ffc107;
+  color: #212529; /* 경고창은 가독성을 위해 검은 글자 */
+}
+
+.error {
+  background-color: #dc3545;
+}

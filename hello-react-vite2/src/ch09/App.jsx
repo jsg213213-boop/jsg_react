@@ -7,6 +7,9 @@ import SassEx1 from './SassEx1';
 import SassComponent from './SassComponent';
 import ButtonGroup from './ButtonGroup';
 import Navbar from './Navbar';
+import CSSModule from './CSSModule';
+import Badge from './Badge';
+import ToggleButton from './ToggleButton';
 const App = () => (
   <div className="App">
     <header>
@@ -33,9 +36,32 @@ const App = () => (
     <p>공통 util.scss 에서 만든 내용을 SassComponent.scss 활용 연습 확인.</p>
     <SassComponent></SassComponent>
     <h2>실습2-1</h2>
-  <ButtonGroup></ButtonGroup>
+  <ButtonGroup>
+    <div style={{ display: 'flex', gap: '1rem', padding: '1rem' }}>
+      <button size="sm">sm 버튼</button>
+      <button size="md">md 버튼</button>
+      <button size="lg">lg 버튼</button>
+      <button size="md" variant="danger">
+        danger 버튼
+      </button>
+
+      <br />
+      </div>
+  </ButtonGroup>
     <h2>실습2-2</h2>
       <Navbar></Navbar>
+      <h2>CSSModule.css 예제</h2>
+    <p>CSSModule 를 이용한 자동 클래스명 생성 예시</p>
+    <CSSModule></CSSModule>
+    <h3>문제 3-1: Badge 컴포넌트</h3>
+      <Badge type="success">성공</Badge>{' '}
+      <Badge type="warning">경고</Badge>{' '}
+      <Badge type="error">오류</Badge>
+
+      <hr />
+
+      <h3>문제 3-2: 토글 버튼</h3>
+      <ToggleButton />
   </div>
   
 );

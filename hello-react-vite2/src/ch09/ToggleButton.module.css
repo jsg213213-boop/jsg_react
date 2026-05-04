@@ -1,0 +1,16 @@
+.button {
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  outline: none;
+}
+
+/* 활성화 상태일 때의 스타일 */
+.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
