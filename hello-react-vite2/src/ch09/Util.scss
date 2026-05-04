@@ -1,0 +1,94 @@
+// $ 기호로 변수 선언
+$primary-color: #ea8e17;
+$font-size-base: 16px;
+$border-radius: 8px;
+
+.button {
+  background: $primary-color;
+  font-size: $font-size-base;
+  border-radius: $border-radius;
+}
+
+// CSS를 계층적으로 작성 가능
+.card {
+  background: white;
+  padding: 1rem;
+
+  .title {         /* .card .title */
+    color: blue;
+  }
+
+  &:hover {        /* .card:hover (&는 현재 선택자를 의미) */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  &:active {       /* .card.active */
+    border: 2px solid blue;
+  }
+}
+
+// 매개변수 없는 믹스인
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 매개변수 있는 믹스인
+@mixin square($size) {
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}
+
+// 매개변수 있는 믹스인
+@mixin square($size, $color) {
+  $calculated: 32px * $size;
+  background: $primary-color;
+  width: $calculated;
+  height: $calculated;
+  background: $color;
+}
+
+// 사용하기
+.container {
+  @include flex-center;
+}
+
+.box-small { 
+  @include square(1, blue); 
+} /* 32px */
+.box-large { @include square(3, red); } /* 96px */
+
+.box-step1 { 
+  @include square(1, red);
+
+  &:hover {        /* .card:hover (&는 현재 선택자를 의미) */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+   &:active {       /* .card.active */
+    border: 2px solid blue;
+  }
+}
+
+// 공통의 속성을 따로 분리해서, 하나로 만들어서, 함수처럼 분리 후 일괄 적용해보기.
+.box {
+  transition: all 0.2s ease;
+
+  &:hover {        /* .card:hover (&는 현재 선택자를 의미) */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  &:active {
+    transform: scale(0.9)
+  }
+
+}
+
+
+.box-step2 { @extend .box; @include square(2, orange); }
+.box-step3 { @extend .box; @include square(3, yellow); }
+.box-step4 { @extend .box; @include square(4, green); }
+.box-step5 { @extend .box; @include square(5, blue); }
+.box-step6 { @extend .box; @include square(6, navy); }
+.box-step7 { @extend .box; @include square(7, violet); }

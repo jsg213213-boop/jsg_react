@@ -1,0 +1,21 @@
+@use './util.scss' as *;
+
+.SassComponent {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+
+  .box {
+    background: red;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &.red    {  @include square(1, red); }
+    &.orange { @include square(2, orange); }
+    &.yellow {  @include square(3, yellow); }
+    &.green  {  @include square(4, green); }
+    &.blue   {  @include square(5, blue); }
+
+    &:hover { background: black; }
+  }
+}
