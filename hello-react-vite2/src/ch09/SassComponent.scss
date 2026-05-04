@@ -10,11 +10,14 @@
     cursor: pointer;
     transition: all 0.3s ease-in;
 
-    &.red    {  @include square(1, red); }
-    &.orange { @include square(2, orange); }
-    &.yellow {  @include square(3, yellow); }
+    &.violet    {  @include square(1, violet); }
+    &.navy { @include square(2, navy); }
+    &.blue {  @include square(3, blue); }
     &.green  {  @include square(4, green); }
-    &.blue   {  @include square(5, blue); }
+    &.yellow   {  @include square(5, yellow); }
+    &.orange   {  @include square(6, orange); }
+    &.red {  @include square(7, red); }
+  
 
     &:hover { background: black; }
   }
