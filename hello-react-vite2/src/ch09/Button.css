@@ -1,0 +1,24 @@
+/* 문제 1-2 : 버튼에 :hover와 :active 선택자를 활용하여 
+마우스를 올렸을 때 배경색이 바뀌고, 
+클릭 시 살짝 눌리는 효과(transform: scale)를 주세요
+Ex2.jsx 에 만들었던 css 적용해보기. */
+
+.MyButton {
+    background-color: aqua;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.MyButton:hover {
+    background-color: brown;
+}
+
+.MyButton:active {
+    /* 살짝 축소로 클릭 효과 주기 */
+    transform: scale(0.95); 
+}
