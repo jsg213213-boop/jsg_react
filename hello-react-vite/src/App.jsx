@@ -20,6 +20,10 @@ function App() {
           <h2>jsg test</h2>
           <h3>성규 생년월일:1992-02-13</h3>
           <h3>성규 이메일 주소:jsg213213@naver.com</h3>
+          <h3>학력:대졸</h3>
+          <h3>연락처:010-2036-8094</h3>
+          <h3>주소:부산 사하구 다대로 470 해송아파트</h3>
+          <h3>출퇴근법:버스&지하철</h3>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
