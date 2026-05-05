@@ -116,9 +116,9 @@ const IterationSample = () => {
     // name.id = 4 인경우  4 !== 1(삭제할 요소) , 참
     // nextNames =
     // [
-    // { id: 2, text: '얼음' },
-    // { id: 3, text: '눈' },
-    // { id: 4, text: '바람' },
+    // { id: 2, text: '성수동골목' },
+    // { id: 3, text: '여의도공원' },
+    // { id: 4, text: '북서울꿈의숲' },
     // ]
 
     // 복구 기능 구현
