@@ -8,7 +8,7 @@ import cn from 'classnames';
 import './TodoListItem.scss';
 
 const TodoListItem = ({ todo, onRemove, onToggle }) => {
-  // 문제 3-2: 삭제 확인
+  // 실습 3-2: 삭제 확인
   const onConfirmRemove = () => {
     if (window.confirm('정말 삭제할까요?')) {
       onRemove(todo.id);
@@ -27,7 +27,7 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
       className="TodoListItem" 
       style={{ borderLeft: `5px solid ${priorityColors[todo.priority]}` }} // 우선순위 바 추가
     >
-      {/* 문제 2-1: 구조 분해 할당 없이 직접 사용 */}
+      {/* 실습 2-1: 구조 분해 할당 없이 직접 사용 */}
       <div
         className={cn('checkbox', { checked: todo.checked })}
         onClick={() => onToggle(todo.id)}
