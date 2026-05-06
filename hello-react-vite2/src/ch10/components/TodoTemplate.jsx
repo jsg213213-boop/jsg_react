@@ -1,4 +1,3 @@
-// src/components/TodoTemplate.js
 import './TodoTemplate.scss';
 
 const TodoTemplate = ({ children }) => (
