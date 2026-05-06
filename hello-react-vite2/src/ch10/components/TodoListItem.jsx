@@ -1,4 +1,3 @@
-// src/components/TodoListItem.js
 import {
   MdCheckBoxOutlineBlank, // 미체크 아이콘 □
   MdCheckBox, // 체크 아이콘 ☑
