@@ -1,4 +1,3 @@
-// src/components/TodoList.js
 import TodoListItem from './TodoListItem';
 import './TodoList.scss';
 
