@@ -1,0 +1,22 @@
+// src/components/TodoTemplate.scss
+.TodoTemplate {
+  width: 512px;
+  margin: 0 auto;        /* 화면 가로 중앙 정렬 */
+  margin-top: 6rem;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .app-title {
+    background: #22b8cf;
+    color: white;
+    height: 4rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    background: white;
+  }
+}
