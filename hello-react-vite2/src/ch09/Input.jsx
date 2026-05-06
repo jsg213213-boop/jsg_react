@@ -1,17 +1,39 @@
-import styled from 'styled-components';
-
+import styled, { css } from 'styled-components';
 const Input = styled.input`
-  padding: 10px;
-  border-radius: 4px;
+  width: 80%;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
   outline: none;
-  font-size: 16px;
-  
-  /* error prop이 true일 때만 red, 기본은 lightgray */
-  border: 2px solid ${props => props.error ? 'red' : '#ccc'};
+  transition: border-color 0.2s;
 
   &:focus {
-    border-color: ${props => props.error ? 'red' : '#007bff'};
+    border-color: #1f84e8;
   }
+
+  ${(props) =>
+    props.error &&
+    css`
+      border-color: #e92213;
+      &:focus {
+        border-color: #e92213;
+      }
+    `}
 `;
 
-export default Input;
+const ErrorMessage = styled.p`
+  color: #e92213;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+`;
+
+const InputComponent = ({ error, errorMessage, ...rest }) => {
+  return (
+    <div>
+      <Input error={error} {...rest} />
+      {error && errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+    </div>
+  );
+};
+
+export default InputComponent;

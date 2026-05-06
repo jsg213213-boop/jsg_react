@@ -13,6 +13,7 @@ import ToggleButton from './ToggleButton';
 import StyledComponent from './StyledComponent';
 import Input from './Input';
 import Card from './Card';
+import ProductCard from './ProductCard';
 const App = () => (
   <div className="App">
     <header>
@@ -72,6 +73,17 @@ const App = () => (
       <h3>실습 4-2: Card StyledComponent</h3>
       <Card variant="primary">Primary Card</Card>
       <Card variant="secondary">Secondary Card</Card>
+      <h3>실습 4-3: Product Card StyledComponent</h3>
+      <ProductCard 
+        name="고급 기계식 키보드" 
+        price={150000} 
+        isDiscounted={true} 
+      />
+      <ProductCard 
+        name="무선 버티컬 마우스" 
+        price={45000} 
+        isDiscounted={false} 
+      />
   </div>
   
 );
