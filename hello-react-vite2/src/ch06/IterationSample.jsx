@@ -84,7 +84,7 @@ const IterationSample = () => {
     // 순서1,
     // some 함수의 , 정의 ,
     // 배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.
-    // 하나라도 일치하면 true, 모두 일치하지 않으면 false를 반환합니다. (중복 검사에 유용)
+    // 하나라도 일치하면 true, 모두 일치하지 않으면 false를 반환합니다. (중복 검사할 때 유용함)
     if (names.some((name) => name.text === inputText)) {
       alert('이미 존재하는 항목입니다.');
       setInputText('');
