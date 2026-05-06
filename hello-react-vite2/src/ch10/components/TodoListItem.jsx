@@ -1,30 +1,36 @@
+import React from 'react';
 import {
-  MdCheckBoxOutlineBlank, // 미체크 아이콘 □
-  MdCheckBox, // 체크 아이콘 ☑
-  MdRemoveCircleOutline, // 삭제 아이콘 ⊖
+  MdCheckBoxOutlineBlank,
+  MdCheckBox,
+  MdRemoveCircleOutline,
 } from 'react-icons/md';
 import cn from 'classnames';
 import './TodoListItem.scss';
 
 const TodoListItem = ({ todo, onRemove, onToggle }) => {
-  // 기존의 구조 분해 할당 코드를 삭제함
+  // 실습 3-2: 삭제 전 확인 메시지
+  const handleRemove = () => {
+    if (window.confirm('정말 삭제할까요?')) {
+      onRemove(todo.id);
+    }
+  };
+
   return (
     <div className="TodoListItem">
-      {/* 체크박스 영역: 클릭 시 토글 */}
       <div
-        className={cn('checkbox', { checked: todo.checked })} // todo.checked로 접근
-        onClick={() => onToggle(todo.id)} // todo.id로 접근
+        className={cn('checkbox', { checked: todo.checked })}
+        onClick={() => onToggle(todo.id)}
       >
         {todo.checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-        <div className="text">{todo.text}</div> {/* todo.text로 접근 */}
+        <div className="text">{todo.text}</div>
       </div>
 
-      {/* 삭제 버튼: 클릭 시 삭제 */}
-      <div className="remove" onClick={() => onRemove(todo.id)}>
+      {/* onClick에서 handleRemove 호출 */}
+      <div className="remove" onClick={handleRemove}>
         <MdRemoveCircleOutline />
       </div>
     </div>
   );
 };
 
-export default TodoListItem;
+export default React.memo(TodoListItem);
