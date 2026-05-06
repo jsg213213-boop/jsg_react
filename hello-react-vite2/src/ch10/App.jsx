@@ -12,7 +12,7 @@ const App = () => {
 
   const nextId = useRef(4);
 
-  // ── 문제 3-1: 빈 문자열 유효성 검사 ─────────────────────
+  // ── 실습 3-1: 빈 문자열 유효성 검사 ─────────────────────
   const onInsert = useCallback((text) => {
     if (text.trim() === '') {
       alert('할 일을 입력해주세요!');
