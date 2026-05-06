@@ -10,6 +10,9 @@ import Navbar from './Navbar';
 import CSSModule from './CSSModule';
 import Badge from './Badge';
 import ToggleButton from './ToggleButton';
+import StyledComponent from './StyledComponent';
+import Input from './Input';
+import Card from './Card';
 const App = () => (
   <div className="App">
     <header>
@@ -62,6 +65,13 @@ const App = () => (
 
       <h3>실습 3-2:토글 버튼</h3>
       <ToggleButton />
+      <h3>Styled Components</h3>
+      <StyledComponent></StyledComponent>
+      <h3>실습 4-1: Input StyledComponent</h3>
+      <Input></Input>
+      <h3>실습 4-2: Card StyledComponent</h3>
+      <Card variant="primary">Primary Card</Card>
+      <Card variant="secondary">Secondary Card</Card>
   </div>
   
 );
