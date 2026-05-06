@@ -15,15 +15,15 @@ const Practice = () => {
       <div className="card__actions">
         <button 
           className="card__button" 
-          onClick={() => setValue(value + 2)}
+          onClick={() => setValue(value + 1)}
         >
-          +2
+          +1
         </button>
         <button 
           className="card__button" 
-          onClick={() => setValue(value - 2)}
+          onClick={() => setValue(value - 1)}
         >
-          -2
+          -1
         </button>
         <button 
           className="card__button" 
