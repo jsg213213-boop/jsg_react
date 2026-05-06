@@ -7,21 +7,20 @@ import cn from 'classnames';
 import './TodoListItem.scss';
 
 const TodoListItem = ({ todo, onRemove, onToggle }) => {
-  const { id, text, checked } = todo; // 구조 분해 할당
-
+  // 기존의 구조 분해 할당 코드를 삭제함
   return (
     <div className="TodoListItem">
       {/* 체크박스 영역: 클릭 시 토글 */}
       <div
-        className={cn('checkbox', { checked })} // checked=true면 'checkbox checked'
-        onClick={() => onToggle(id)}
+        className={cn('checkbox', { checked: todo.checked })} // todo.checked로 접근
+        onClick={() => onToggle(todo.id)} // todo.id로 접근
       >
-        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-        <div className="text">{text}</div>
+        {todo.checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+        <div className="text">{todo.text}</div> {/* todo.text로 접근 */}
       </div>
 
       {/* 삭제 버튼: 클릭 시 삭제 */}
-      <div className="remove" onClick={() => onRemove(id)}>
+      <div className="remove" onClick={() => onRemove(todo.id)}>
         <MdRemoveCircleOutline />
       </div>
     </div>

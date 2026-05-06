@@ -3,14 +3,18 @@ import './TodoList.scss';
 
 const TodoList = ({ todos, onRemove, onToggle }) => (
   <div className="TodoList">
-    {todos.map((todo) => (
-      <TodoListItem
-        todo={todo}
-        key={todo.id} // 리스트 렌더링 시 반드시 고유한 key 필요
-        onRemove={onRemove}
-        onToggle={onToggle}
-      />
-    ))}
+    {todos.length === 0 ? (
+      <div className="empty-message">할 일이 없습니다! 🎉</div>
+    ) : (
+      todos.map((todo) => (
+        <TodoListItem
+          todo={todo}
+          key={todo.id}
+          onRemove={onRemove}
+          onToggle={onToggle}
+        />
+      ))
+    )}
   </div>
 );
 
