@@ -11,97 +11,58 @@ import TodoList from './components/TodoList';
 const App = () => {
   // ── 상태 선언 ──────────────────────────────────────────
   // 순서 11, 기존의 배열 값에도, priority 필드 추가.
-  const [todos, setTodos] = useState(() => {
-    // 실습9,  로컬 스토리지 저장 및 불러오기 작업
-    // ── 실습9, ────────────────────────────────────────────
-    // 순서1,
+  // const [todos, setTodos] = useState(() => {
+  //   // 실습9,  로컬 스토리지 저장 및 불러오기 작업
+  //   // ── 실습9, ────────────────────────────────────────────
+  //   // 순서1,
 
-    // 로컬 스토리지에 값 가져오기
-    const savedTodos = localStorage.getItem('todos');
+  //   // 로컬 스토리지에 값 가져오기
+  //   const savedTodos = localStorage.getItem('todos');
 
-    // 저장된 값이 있으면 JSON -> 객체 변환
-    if (savedTodos) {
-      return JSON.parse(savedTodos);
+  //   // 저장된 값이 있으면 JSON -> 객체 변환
+  //   if (savedTodos) {
+  //     return JSON.parse(savedTodos);
+  //   }
+
+  //   // 없으면, 기본값 사용,
+  //   return [
+  //     {
+  //       id: 1,
+  //       text: '리액트의 기초 알아보기',
+  //       checked: true,
+  //       priority: 'high',
+  //     },
+  //     {
+  //       id: 2,
+  //       text: '컴포넌트 스타일링해 보기',
+  //       checked: true,
+  //       priority: 'medium',
+  //     },
+  //     {
+  //       id: 3,
+  //       text: '일정 관리 앱 만들어 보기',
+  //       checked: false,
+  //       priority: 'low',
+  //     },
+  //   ];
+
+  //   // ── 실습9,순서1, ────────────────────────────────────────────
+  // });
+
+  //────성능 최적화 테스트 ────────────────────────────────────────
+
+  function createBulkTodos() {
+    const array = [];
+    for (let i = 1; i <= 2500; i++) {
+      array.push({ id: i, text: `할 일${i}`, checked: false, priority: 'low' });
     }
+    return array;
+  }
 
-    // 없으면, 기본값 사용,
-    return [
-      {
-        id: 1,
-        text: '리액트의 기초 알아보기',
-        checked: true,
-        priority: 'high',
-      },
-      {
-        id: 2,
-        text: '컴포넌트 스타일링해 보기',
-        checked: true,
-        priority: 'medium',
-      },
-      {
-        id: 3,
-        text: '일정 관리 앱 만들어 보기',
-        checked: false,
-        priority: 'low',
-      },
-      {
-        id: 4,
-        text: '리액트의 기초 알아보기',
-        checked: true,
-        priority: 'high',
-      },
-      {
-        id: 5,
-        text: '컴포넌트 스타일링해 보기',
-        checked: true,
-        priority: 'medium',
-      },
-      {
-        id: 6,
-        text: '일정 관리 앱 만들어 보기',
-        checked: false,
-        priority: 'low',
-      },
-      {
-        id: 7,
-        text: '리액트의 기초 알아보기',
-        checked: true,
-        priority: 'high',
-      },
-      {
-        id: 8,
-        text: '컴포넌트 스타일링해 보기',
-        checked: true,
-        priority: 'medium',
-      },
-      {
-        id: 9,
-        text: '일정 관리 앱 만들어 보기',
-        checked: false,
-        priority: 'low',
-      },
-      {
-        id: 10,
-        text: '리액트의 기초 알아보기',
-        checked: true,
-        priority: 'high',
-      },
-      {
-        id: 11,
-        text: '컴포넌트 스타일링해 보기',
-        checked: true,
-        priority: 'medium',
-      },
-      {
-        id: 12,
-        text: '일정 관리 앱 만들어 보기',
-        checked: false,
-        priority: 'low',
-      },
-    ];
+  // ✅ 함수 자체를 넘기면 첫 렌더에서만 호출됨
+  const [todos, setTodos] = useState(createBulkTodos);
 
-    // ── 실습9,순서1, ────────────────────────────────────────────
-  });
+  //────성능 최적화 테스트 ────────────────────────────────────────
 
   // 다음 id 추적 (useState 아닌 useRef 사용 → 리렌더링 불필요)
   // const nextId = useRef(4);

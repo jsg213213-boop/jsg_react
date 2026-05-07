@@ -2,6 +2,7 @@
 import {
   MdCheckBoxOutlineBlank, // 미체크 아이콘 □
   MdCheckBox, // 체크 아이콘 ☑
+  MdRemoveCircleOutline, // 삭제 아이콘 ⊖
 } from 'react-icons/md';
 import { AiFillDelete } from 'react-icons/ai';
 import cn from 'classnames';

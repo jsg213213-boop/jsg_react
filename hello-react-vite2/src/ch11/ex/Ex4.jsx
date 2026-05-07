@@ -1,7 +1,7 @@
 import {
   MdCheckBoxOutlineBlank, // 미체크 아이콘 □
   MdCheckBox, // 체크 아이콘 ☑
-} from 'react-icons/md';
+  } from 'react-icons/md';
 import { AiFillDelete } from 'react-icons/ai';
 import cn from 'classnames';
 import './TodoListItem.scss';
