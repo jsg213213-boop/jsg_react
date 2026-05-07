@@ -6,12 +6,13 @@ import {
 } from 'react-icons/md';
 import cn from 'classnames';
 import './TodoListItem.scss';
+import React from 'react';
 
-const TodoListItem = ({ todo, onRemove, onToggle }) => {
+const TodoListItem = ({ todo, onRemove, onToggle, style }) => {
   const { id, text, checked } = todo; // 구조 분해 할당
 
   return (
-    <div className="TodoListItem">
+    <div className="TodoListItem" style={style}>
       {/* 체크박스 영역: 클릭 시 토글 */}
       <div
         className={cn('checkbox', { checked })} // checked=true면 'checkbox checked'
@@ -29,4 +30,5 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
   );
 };
 
-export default TodoListItem;
+export default React.memo(TodoListItem);
+// export default TodoListItem;
