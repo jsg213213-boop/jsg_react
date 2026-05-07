@@ -1,46 +1,56 @@
-import React from 'react';
+// src/components/TodoListItem.js
 import {
-  MdCheckBoxOutlineBlank,
-  MdCheckBox,
-  MdRemoveCircleOutline,
+  MdCheckBoxOutlineBlank, // 미체크 아이콘 □
+  MdCheckBox, // 체크 아이콘 ☑
 } from 'react-icons/md';
+import { AiFillDelete } from 'react-icons/ai';
 import cn from 'classnames';
 import './TodoListItem.scss';
 
+// 순서8, priority 색상 바 추가.
+// - `TodoListItem`에서 우선순위에 따라 왼쪽에 색상 바(border-left) 표시
+//     - high: 빨간색 `#ff6b6b`
+//     - medium: 노란색 `#fcc419`
+//     - low: 초록색 `#51cf66`
+const priorityColor = {
+  high: `#ff6b6b`,
+  medium: `#fcc419`,
+  low: `#51cf66`,
+};
+
 const TodoListItem = ({ todo, onRemove, onToggle }) => {
-  // 실습 3-2: 삭제 확인
-  const onConfirmRemove = () => {
-    if (window.confirm('정말 삭제할까요?')) {
-      onRemove(todo.id);
+  // 순서9, todo에서, priority 값을 사용하기 쉽게 꺼내 놓고
+  const { id, text, checked, priority } = todo; // 구조 분해 할당
+
+  // 삭제 전 confirm 다이얼로그 표시,
+  const handleRemove = () => {
+    if (window.confirm(`"${text}" 정말 삭제할까요?`)) {
+      onRemove(id);
     }
   };
 
-  // 우선순위별 색상 매핑
-  const priorityColors = {
-    high: '#ff6b6b',
-    medium: '#fcc419',
-    low: '#51cf66',
-  };
-
   return (
-    <div 
-      className="TodoListItem" 
-      style={{ borderLeft: `5px solid ${priorityColors[todo.priority]}` }} // 우선순위 바 추가
+    <div
+      className="TodoListItem"
+      // 순서10, 실제 아이템의 왼쪽 사이드 바에 색상으로 표기하기.
+      style={{ borderLeft: `4px solid ${priorityColor[priority]}` }}
     >
-      {/* 실습 2-1: 구조 분해 할당 없이 직접 사용 */}
+      {/* 체크박스 영역: 클릭 시 토글 */}
       <div
-        className={cn('checkbox', { checked: todo.checked })}
-        onClick={() => onToggle(todo.id)}
+        className={cn('checkbox', { checked })} // checked=true면 'checkbox checked'
+        onClick={() => onToggle(id)}
       >
-        {todo.checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-        <div className="text">{todo.text}</div>
+        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+        <div className="text">{text}</div>
       </div>
 
-      <div className="remove" onClick={onConfirmRemove}>
-        <MdRemoveCircleOutline />
+      {/* 삭제 버튼: 클릭 시 삭제 */}
+      <div className="remove" onClick={handleRemove}>
+        {/* <MdRemoveCircleOutline /> */}
+        <AiFillDelete />
       </div>
     </div>
   );
 };
 
-export default React.memo(TodoListItem);
+export default TodoListItem;
