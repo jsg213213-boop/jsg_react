@@ -39,4 +39,41 @@
 
     &:hover { color: #ff8787; }
   }
+
+   .update {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #3024dc;
+    cursor: pointer;
+
+    &:hover { color: #1606f5; }
+  }
+
+  // 실습 7 수정 부분 css 부분, 
+  //추가, 
+  .editing {
+    cursor: pointer;
+  }
+
+  .edit-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #495057;
+  }
+
+  .save{
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .cancel {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+
 }
