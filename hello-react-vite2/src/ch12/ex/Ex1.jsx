@@ -1,5 +1,4 @@
 import { produce } from 'immer';
-import React from 'react';
 
 // > 아래 객체가 있습니다. immer의 `produce`를 사용하여
 // `user.address.city` 값을 `'부산'`으로 변경하는 코드를 작성하세요.

@@ -1,5 +1,4 @@
 import { produce } from 'immer';
-import React from 'react';
 
 const ImmerTest = () => {
   const originalState = [
