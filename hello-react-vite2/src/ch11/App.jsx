@@ -79,7 +79,7 @@ export default function App() {
   // --- [Q1] useState 지연 초기화 ---
   const [renderTick, setRenderTick] = useState(0);
   // eslint-disable-next-line no-unused-vars
-const [q1Todos] = useState(createBulkTodos);
+  const [q1Todos] = useState(createBulkTodos);
 
   // --- [Q7] useReducer & 가상 스크롤 상태 ---
   const [todosQ7, dispatchQ7] = useReducer(todoReducer, undefined, createBulkTodos);
@@ -90,14 +90,14 @@ const [q1Todos] = useState(createBulkTodos);
   const [q2Count, setQ2Count] = useState(0);
   const [q3Parent, setQ3Parent] = useState(0);
   // eslint-disable-next-line no-unused-vars
-const [q3Score, setQ3Score] = useState(100);
+  const [q3Score, setQ3Score] = useState(100);
   const [q4Count, setQ4Count] = useState(0);
 
   // --- [Q4] useCallback 함수 ---
   const handlePing = useCallback(() => console.log("Ping!"), []);
 
   // --- [Q7] Virtualized rowRenderer ---
-  const rowRenderer = useCallback(({ index, key, style }) => {
+    const rowRenderer = useCallback(({ index, key, style }) => {
     const todo = todosQ7[index];
     return <TodoItemVirtual key={key} todo={todo} onToggle={onToggleQ7} onRemove={onRemoveQ7} style={style} />;
   }, [todosQ7, onToggleQ7, onRemoveQ7]);
