@@ -3,7 +3,7 @@ import ImmerTest from './ImmerTest';
 import Ex2 from './ex/Ex2';
 import ImmerTest2 from './ImmerTest2';
 import Ex3 from './ex/Ex3';
-import Ex4 from './ex/Ex4';
+import FinalEx from './ex/FinalEx';
 
 const App = () => {
   return (
@@ -19,8 +19,8 @@ const App = () => {
       <ImmerTest2></ImmerTest2>
       <h2>실습3</h2>
       <Ex3></Ex3>
-      <h2>실습4</h2>
-      <Ex4></Ex4>
+      <h2>최종 실습</h2>
+      <FinalEx></FinalEx>
     </div>
   );
 };
