@@ -104,7 +104,7 @@ const [q3Score, setQ3Score] = useState(100);
 
   return (
     <div style={{ padding: 24, background: '#f8f9fa', minHeight: '100vh', fontFamily: "system-ui" }}>
-      <h1 style={{ color: '#22b8cf' }}>성능 최적화 종합 실습 (Q1-Q7)</h1>
+      <h1 style={{ color: '#22b8cf' }}>성능 최적화 종합 실습(Q1-Q7)</h1>
 
       {/* Q1 섹션 */}
       <section style={sectionStyle}>
