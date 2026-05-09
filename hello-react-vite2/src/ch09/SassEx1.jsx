@@ -7,7 +7,7 @@ const SassEx1 = () => {
 
       <div className="card">
         <h2 className="title">카드에 중첩으로 요소들 적용해보기 </h2>
-        <p>오늘의 점심메뉴:일식돈가스</p>
+        <p>오늘의 점심메뉴:흑돼지목살구이</p>
       </div>
 
       <div>
