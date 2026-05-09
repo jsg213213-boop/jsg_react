@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { memo, useCallback, useReducer } from 'react';
 import { List } from 'react-virtualized';
 import 'react-virtualized/styles.css';

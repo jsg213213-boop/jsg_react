@@ -869,10 +869,10 @@ ignore@^5.2.0:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz"
   integrity sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==
 
-immer@^11.1.7:
-  version "11.1.7"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-11.1.7.tgz#31fe3ec0a808fcbe900a7a428083a9a98252a000"
-  integrity sha512-LFVFtAROHcDy1er5UI6nodRFnZ2SgdCXhfNSI+DpObO8N7Pur/muBGsjzH5wpnFHCYhYVQxZskCkV4koQ//3/Q==
+immer@^11.1.8:
+  version "11.1.8"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-11.1.8.tgz#08a6426f7019dbce8d6dff8c4a43bb25c550a575"
+  integrity sha512-/tbkHMW7y10Lx6i1crLjD4/OhNkRG+Fo7byZHtah0547nIeXYcpIXaUh0IAQY6gO5459qpGGYapcEOHtFXkIuA==
 
 immutable@^5.1.5:
   version "5.1.5"
@@ -1181,7 +1181,7 @@ react-lifecycles-compat@^3.0.4:
 
 react-virtualized@^9.22.6:
   version "9.22.6"
-  resolved "https://registry.npmjs.org/react-virtualized/-/react-virtualized-9.22.6.tgz"
+  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.22.6.tgz#3ae2aa69eca61cf3af332e2f9d6b4aa5638786d5"
   integrity sha512-U5j7KuUQt3AaMatlMJ0UJddqSiX+Km0YJxSqbAzIiGw5EmNz0khMyqP2hzgu4+QUtm+QPIrxzUX4raJxmVJnHg==
   dependencies:
     "@babel/runtime" "^7.7.2"
