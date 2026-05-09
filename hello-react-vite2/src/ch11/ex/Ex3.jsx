@@ -1,5 +1,3 @@
-import React, { memo } from 'react';
-
 import { useState } from 'react';
 
 // TODO: 이 컴포넌트에 memo를 적용하세요
