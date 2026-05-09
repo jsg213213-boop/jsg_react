@@ -1,3 +1,4 @@
+ import { useState } from 'react'; 
   const Ex5 = () => {
   const [todos, setTodos] = useState([
     { id: 1, text: '리액트 공부하기', checked: false }, // 첫 요소의 객체가 저장된 기존 메모리 주소 : 0x100

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { memo } from 'react';
 
 // TODO: 이 컴포넌트에 memo를 적용하세요
 // memo가 부모로부터 받는 props 비교만 최적화합니다.
