@@ -18,12 +18,10 @@ function App() {
         <div>
           <h1>Get started</h1>
           <h2>test practice</h2>
-          <h3>올해 꼭 가고 싶은 서울여행지:신도림테크노마트하늘공원</h3>
           <h3>가장 재밌게 본 영화:휴민트</h3>
           <h3>가장 재밌게 본 드라마:펜트하우스</h3>
           <h3>가장 좋아하는 색깔:초록색</h3>
           <h3>가장 좋아하는 반려동물:고양이</h3>
-          <h3>서울에서 자주 이용하는 지하철:신분당선&7호선&4호선&1호선&3호선&2호선</h3>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
