@@ -21,7 +21,7 @@ const Layout = () => (
         소개
       </NavLink>
       <NavLink
-        to="/profiles/velopert"
+        to="/profiles/jsg"
         style={({ isActive }) => isActive ? activeStyle : navStyle}
       >
         프로필
