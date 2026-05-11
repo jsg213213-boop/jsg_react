@@ -53,7 +53,7 @@ const FinalEx = () => {
     setState(
       produce((draft) => {
         const student = draft.students.find((s) => s.id === id);
-        if (student) student.score += 10;
+        if (student) student.score = Number(student.score) + 10;
       }),
     );
   };
