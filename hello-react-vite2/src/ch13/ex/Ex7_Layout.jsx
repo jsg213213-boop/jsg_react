@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { Outlet, NavLink } from 'react-router-dom';
 
 const navStyle = { marginRight: '12px', textDecoration: 'none', color: '#555' };
