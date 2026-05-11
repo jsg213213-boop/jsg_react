@@ -7,6 +7,9 @@ import Ex2 from './ex/Ex2';
 import Ex3 from './ex/Ex3';
 import Articles from './pages/Articles';
 import Article from './pages/Article';
+import Ex4 from './ex/Ex4';
+import Layout from './pages/Layout';
+import Ex5 from './ex/Ex5';
 
 const App = () => {
   return (
@@ -23,14 +26,19 @@ const App = () => {
       <hr />
       {/* 라우트 설정 */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Ex1 />} />
-        <Route path="/profiles/:username" element={<Profile />} />
-        <Route path="/profiles2/:username" element={<Ex2 />} />
-        <Route path="/about2" element={<Ex3 />} />
-        <Route path="/articles" element={<Articles />}>
-          <Route path=":id" element={<Article />} />
+        {/* Layout 안에 묶인 라우트들은 Layout을 공유 */}
+        <Route element={<Ex5 />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Ex1 />} />
+          <Route path="/profiles/:username" element={<Profile />} />
+          <Route path="/profiles2/:username" element={<Ex2 />} />
+          <Route path="/about2" element={<Ex3 />} />
+          <Route path="/articles" element={<Articles />}>
+            <Route index element={<Ex4 />} /> {/*기본 자식 컴포넌트로 활용 */}
+            <Route path=":id" element={<Article />} />
+            <Route element={<Layout />}></Route>
+          </Route>
         </Route>
       </Routes>
     </div>
