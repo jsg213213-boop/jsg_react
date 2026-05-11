@@ -44,6 +44,13 @@ const Ex5 = () => {
         >
           프로필
         </NavLink>
+
+        <NavLink
+          to="/useNavigate"
+          style={({ isActive }) => (isActive ? activeStyle : navStyle)}
+        >
+          useNavigate 테스트
+        </NavLink>
         {/* 순서3, 화면에 표시하기.  */}
         <span>⏲️: {time}</span>
       </header>
