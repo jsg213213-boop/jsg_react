@@ -39,7 +39,7 @@ const Ex5 = () => {
           소개
         </NavLink>
         <NavLink
-          to="/profiles/lsy"
+          to="/profiles/jsg"
           className={({ isActive }) =>
             isActive ? 'active-link' : 'normal-link'
           }
