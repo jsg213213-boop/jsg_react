@@ -45,7 +45,7 @@ const NewsItemBlock = styled.div`
   }
 `;
 
-const NewsItem = ({ article }) => {
+const Ex3 = ({ article }) => {
   // 실습 3, 순서1
   // NewsItem 컴포넌트를 수정하여, 날짜(publishedAt)도 표시하도록 추가하세요.
   // 날짜 형식은 YYYY-MM-DD만 표시합니다.
@@ -83,4 +83,4 @@ const NewsItem = ({ article }) => {
   );
 };
 
-export default NewsItem;
+export default Ex3;

@@ -17,9 +17,7 @@ const NewsListBlock = styled.div`
 // YOUR_API_KEY 자리에 newsapi.org에서 발급받은 키를 입력하세요
 const apiKey = import.meta.env.VITE_News_API_KEY;
 
-const NewsList = ({ category = 'all' }) => {
-  // 실습4, 확인용
-  //   const [articles, setArticles] = useState([]);
+const Ex4 = ({ category = 'all' }) => {
   const [articles, setArticles] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -34,8 +32,6 @@ const NewsList = ({ category = 'all' }) => {
         const response = await axios.get(
           `https://newsapi.org/v2/top-headlines?country=us${query}&apiKey=${apiKey}`,
         );
-        // 실습 4 확인용
-        // setArticles(response.data.articles);
         setArticles(response.data.articles);
       } catch (e) {
         setError('뉴스를 불러오는 데 실패했습니다.');
@@ -83,4 +79,4 @@ const NewsList = ({ category = 'all' }) => {
   );
 };
 
-export default NewsList;
+export default Ex4;

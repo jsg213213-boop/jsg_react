@@ -18,7 +18,8 @@ const App = () => {
       <Ex2></Ex2>
       <h2>news Api 테스트</h2>
       <NewsList category="all" />
-    </div>
+      
+  </div>
   );
 };
 
