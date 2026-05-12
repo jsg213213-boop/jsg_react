@@ -60,12 +60,6 @@ const NewsList = ({ category = 'all' }) => {
     );
   if (!articles) return null;
 
-  // ### 📝 실습 문제 4
-
-  // > NewsList 컴포넌트에서 articles가 빈 배열일 때 (기사가 없을 때)
-  // `"📭 표시할 뉴스가 없습니다."` 메시지를 보여주도록 처리하세요.
-  // >
-  // 실습4 , 순서1
   if (articles.length === 0) {
     return (
       <NewsListBlock>
