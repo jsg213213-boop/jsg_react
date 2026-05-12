@@ -18,7 +18,7 @@ const categoryNames = {
   technology: '기술',
 };
 
-const NewsPage = () => {
+const Ex5 = () => {
   // URL: /technology → params.category = 'technology'
   // URL: /           → params.category = undefined
   const { category } = useParams();
@@ -53,4 +53,4 @@ const NewsPage = () => {
   );
 };
 
-export default NewsPage;
+export default Ex5;

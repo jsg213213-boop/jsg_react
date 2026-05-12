@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const categories = [
   { name: 'all', text: '전체보기' },
@@ -13,18 +13,23 @@ const categories = [
 
 const CategoriesBlock = styled.div`
   display: flex;
+  flex-direction: column; /* 제목과 버튼들을 세로로 배치 */
   padding: 1rem;
   width: 768px;
   margin: 0 auto;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+  gap: 1rem;
 
   @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;
 
-// styled(NavLink): NavLink에 스타일 적용
+const CategoryList = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+`;
+
 const Category = styled(NavLink)`
   font-size: 1rem;
   cursor: pointer;
@@ -39,7 +44,6 @@ const Category = styled(NavLink)`
     background: #dee2e6;
   }
 
-  /* NavLink가 active일 때 자동으로 .active 클래스 추가 */
   &.active {
     background: #007bff;
     color: white;
@@ -47,18 +51,42 @@ const Category = styled(NavLink)`
   }
 `;
 
-const Categories = () => (
-  <CategoriesBlock>
-    {categories.map(c => (
-      <Category
-        key={c.name}
-        to={c.name === 'all' ? '/' : `/${c.name}`}
-        end={c.name === 'all'} // / 경로는 정확히 일치할 때만 active
-      >
-        {c.text}
-      </Category>
-    ))}
-  </CategoriesBlock>
-);
+const CategoryTitle = styled.h2`
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #212529;
+`;
+
+const Categories = () => {
+  const location = useLocation();
+  
+  // 현재 URL 경로에서 카테고리 이름 추출 (예: '/business' -> 'business')
+  // 만약 경로가 '/' 라면 'all'로 간주
+  const categoryPath = location.pathname === '/' ? 'all' : location.pathname.replace('/', '');
+
+  // 현재 카테고리 객체 찾기
+  const currentCategory = categories.find(c => c.name === categoryPath);
+  // 찾지 못했을 경우(예: 잘못된 경로) 기본값 설정
+  const titleText = currentCategory ? currentCategory.text : '전체보기';
+
+  return (
+    <CategoriesBlock>
+      {/* 상단 동적 제목 섹션 */}
+      <CategoryTitle>📰 {titleText} 뉴스</CategoryTitle>
+
+      <CategoryList>
+        {categories.map(c => (
+          <Category
+            key={c.name}
+            to={c.name === 'all' ? '/' : `/${c.name}`}
+            end={c.name === 'all'}
+          >
+            {c.text}
+          </Category>
+        ))}
+      </CategoryList>
+    </CategoriesBlock>
+  );
+};
 
 export default Categories;
