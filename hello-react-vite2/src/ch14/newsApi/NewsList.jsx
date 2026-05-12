@@ -15,7 +15,7 @@ const NewsListBlock = styled.div`
 `;
 
 // YOUR_API_KEY 자리에 newsapi.org에서 발급받은 키를 입력하세요
-const API_KEY = 'a9ec398364674a29a2c3cdf17e0be44d';
+const apiKey = import.meta.env.VITE_News_API_KEY;
 
 const NewsList = ({ category = 'all' }) => {
   const [articles, setArticles] = useState(null);
@@ -30,7 +30,7 @@ const NewsList = ({ category = 'all' }) => {
         // category가 'all'이면 카테고리 파라미터 생략
         const query = category === 'all' ? '' : `&category=${category}`;
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us${query}&apiKey=${API_KEY}`,
+          `https://newsapi.org/v2/top-headlines?country=us${query}&apiKey=${apiKey}`,
         );
         setArticles(response.data.articles);
       } catch (e) {
