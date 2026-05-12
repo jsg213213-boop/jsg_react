@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 
-// import DummyJson from '../dummyJson/DummyJson';
-// import Ex1 from '../ex/Ex1';
-// import Jsonplaceholder from '../jsonplaceholder/Jsonplaceholder';
-// import Ex2 from '../ex/Ex2';
+import DummyJson from '../dummyJson/DummyJson';
+import Ex1 from '../ex/Ex1';
+import Jsonplaceholder from '../jsonplaceholder/Jsonplaceholder';
+import Ex2 from '../ex/Ex2';
 import NewsList from './NewsList';
 import Categories from './Categories';
 
@@ -16,7 +16,7 @@ const NewsPage = () => {
   return (
     <>
       {/* 이전 예제및 실습 확인 하려면, 주석 해제하기. */}
-      {/* <div>
+      <div>
         <h1>ch14 API Test</h1>
         <h2>dummyJson</h2>
         <DummyJson></DummyJson>
@@ -28,7 +28,7 @@ const NewsPage = () => {
         <Ex2></Ex2>
         <h2>news Api 테스트</h2>
         <NewsList category="all" />
-      </div> */}
+      </div>
       <Categories />
       <NewsList category={currentCategory} />
     </>
