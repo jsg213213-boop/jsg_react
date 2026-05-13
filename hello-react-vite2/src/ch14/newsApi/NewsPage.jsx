@@ -1,10 +1,13 @@
 import { useParams } from 'react-router-dom';
-
+import DummyJson from '../dummyJson/DummyJson';
+import Ex1 from '../ex/Ex1';
+import Ex2 from '../ex/Ex2';
+import Jsonplaceholder from '../jsonplaceholder/Jsonplaceholder';
 import NewsList from './NewsList';
 import Categories from './Categories';
-// import Ex6 from '../ex/Ex6';
-// import { useState } from 'react';
-// import FinalEx from '../ex/FinalEx';
+import Ex6 from '../ex/Ex6';
+import { useState } from 'react';
+import FinalEx from '../ex/FinalEx';
 
 // 실습 5, 순서1, 상단에 이름으로 표기할 내용을 객체 형태로 저장.
 const categoryNames = {
@@ -29,46 +32,47 @@ const NewsPage = () => {
   const categoryText = categoryNames[currentCategory] || '전체보기';
 
   // 파이널 실습, 페이지 번호, 상태변수로 지정,
-  // const [page, setPage] = useState(1);
+  const [page, setPage] = useState(1);
 
   return (
-    <>
-      {/* 이전 예제및 실습 확인 하려면, 주석 해제하기. */}
-      {/* <div>
-        <h1>ch14 API Test</h1>
-        <h2>dummyJson</h2>
-        <DummyJson></DummyJson>
-        <h2>Ex1, JSONPlaceholder 통신 확인 </h2>
-        <Ex1></Ex1>
-        <h2>Jsonplaceholder</h2>
-        <Jsonplaceholder></Jsonplaceholder>
-        <h2>Ex2, JSONPlaceholder 게시글 상세확인 </h2>
-        <Ex2></Ex2>
-        <h2>news Api 테스트</h2>
-        <NewsList category="all" />
-      </div> */}
-      {/* 실습 5, 순서3, 화면에 출력해보기 */}
-      {/* <h2>실습6, 화면 출력</h2>
-      <Ex6></Ex6> */}
+  <>
+    <h1>ch14 API Test</h1>
+    <h2>dummyJson</h2>
+    <DummyJson></DummyJson>
 
-      {/* <h2>파이널 실습, 화면 출력</h2> */}
-      {/* 페이지 번호 임의로 3개만 출력 */}
-      {/* <div>
-        {[1, 2, 3].map((p) => (
-          <button key={p} onClick={() => setPage(p)}>
-            {p}페이지
-          </button>
-        ))}
-      </div>
-      <FinalEx page={page}></FinalEx> */}
+    <h2>Ex1, JSONPlaceholder 통신 확인 </h2>
+    <Ex1></Ex1>
 
-      <h1 style={{ textAlign: 'center', marginTop: '20px' }}>
-        📰 {categoryText}
-      </h1>
-      <Categories />
-      <NewsList category={currentCategory} />
-    </>
-  );
+    <h2>Jsonplaceholder</h2>
+    <Jsonplaceholder></Jsonplaceholder>
+
+    <h2>Ex2, JSONPlaceholder 게시글 상세확인 </h2>
+    <Ex2></Ex2>
+
+    <h2>news Api 테스트</h2>
+    <NewsList category="all" />
+
+    <h2>실습 5, 순서3, 화면에 출력해보기 </h2>
+    <h2>실습6, 화면 출력</h2>
+    <Ex6></Ex6>
+
+    <h2>파이널 실습, 화면 출력</h2>
+    <div>
+      {[1, 2, 3].map((p) => (
+        <button key={p} onClick={() => setPage(p)}>
+          {p}페이지
+        </button>
+      ))}
+    </div>
+    <FinalEx page={page}></FinalEx>
+
+    <h1 style={{ textAlign: 'center', marginTop: '20px' }}>
+      📄 {categoryText}
+    </h1>
+    <Categories />
+    <NewsList category={currentCategory} />
+  </>
+);
 };
 
 export default NewsPage;
