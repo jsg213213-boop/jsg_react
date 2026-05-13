@@ -3,6 +3,7 @@ import ColorBox2 from './components/ColorBox2';
 import SelectColors from './components/SelectColors';
 import ColorContext from './contexts/ColorContext';
 import { ColorProvider } from './contexts/ColorContext2';
+import Ex2 from './ex/Ex2';
 
 const App = () => (
   <div style={{ padding: '20px' }}>
@@ -23,6 +24,7 @@ const App = () => (
 
     <h2>Ex1 실습1</h2>
     <p>ColorBox 컴포넌트에 적용해서, 박스 아래에 색깔 표기함.</p>
+   
 
     <h2>동적 Context 예시</h2>
     <ColorProvider>
@@ -31,6 +33,10 @@ const App = () => (
         <h1>동적 Context 예제 🎨</h1>
         <SelectColors />
         <ColorBox2 />
+        <h2>Ex2 실습</h2>
+        <p>SelectColors 컴포넌트에서 현재 선택된 메인 색상과 서브 색상 이름을 색상 팔레트 아래에 텍스트로 표시</p>
+        <Ex2 />
+
       </div>
     </ColorProvider>
   </div>
