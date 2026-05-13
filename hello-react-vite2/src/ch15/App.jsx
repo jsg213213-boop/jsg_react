@@ -19,7 +19,7 @@ const App = () => {
     setUser((u) =>
       u.isLoggedIn
         ? { name: '게스트', isLoggedIn: false }
-        : { name: '이상용', isLoggedIn: true },
+        : { name: '정성규', isLoggedIn: true },
     );
 
   return (
