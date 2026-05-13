@@ -9,25 +9,33 @@ const SelectColors = () => (
       좌클릭: 메인 색상 변경 | 우클릭: 서브 색상 변경
     </p>
     <ColorConsumer>
-      {({ actions }) => (
-        <div style={{ display: 'flex', gap: '4px' }}>
-          {colors.map(color => (
-            <div
-              key={color}
-              style={{
-                background: color,
-                width: '36px',
-                height: '36px',
-                cursor: 'pointer',
-                borderRadius: '4px',
-              }}
-              onClick={() => actions.setColor(color)}
-              onContextMenu={e => {
-                e.preventDefault(); // 우클릭 메뉴 방지
-                actions.setSubcolor(color);
-              }}
-            />
-          ))}
+      {({ state, actions }) => (
+        <div>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            {colors.map((color) => (
+              <div
+                key={color}
+                style={{
+                  background: color,
+                  width: '36px',
+                  height: '36px',
+                  cursor: 'pointer',
+                  borderRadius: '4px',
+                }}
+                onClick={() => actions.setColor(color)}
+                onContextMenu={(e) => {
+                  e.preventDefault(); // 우클릭 메뉴 방지
+                  actions.setSubcolor(color);
+                }}
+              />
+            ))}
+          </div>
+          <p>
+            메인 색깔: <span style={{ color: state.color }}>{state.color}</span>{' '}
+            {'|'}
+            보조 색깔:{' '}
+            <span style={{ color: state.subcolor }}>{state.subcolor}</span>
+          </p>
         </div>
       )}
     </ColorConsumer>
