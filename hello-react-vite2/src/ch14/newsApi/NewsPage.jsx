@@ -6,6 +6,7 @@ import Jsonplaceholder from '../jsonplaceholder/Jsonplaceholder';
 import Ex2 from '../ex/Ex2';
 import NewsList from './NewsList';
 import Categories from './Categories';
+import Ex6 from '../ex/Ex6';
 
 // 실습 5, 순서1, 상단에 이름으로 표기할 내용을 객체 형태로 저장.
 const categoryNames = {
@@ -44,6 +45,8 @@ const NewsPage = () => {
         <NewsList category="all" />
       </div>
       {/* 실습 5, 순서3, 화면에 출력해보기 */}
+      <h2>실습6, 화면 출력</h2>
+      <Ex6></Ex6>
       <h1 style={{ textAlign: 'center', marginTop: '20px' }}>
         📰 {categoryText} 뉴스
       </h1>
