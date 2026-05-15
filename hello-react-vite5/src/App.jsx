@@ -22,6 +22,7 @@ function App() {
           <h3>자전거 탈 때는 헬멧 착용 필수!!</h3>
           <h3>안전거리 지키면서 주행하기!!</h3>
           <h3>터널 들어가고 나갈때는 감속하기!!</h3>
+          <h3>도로 위에서 시비걸고 싸우는 행위 절대 금지!!</h3>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
