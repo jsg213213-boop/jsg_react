@@ -8,6 +8,8 @@ const SassEx1 = () => {
       <div className="card">
         <h2 className="title">카드에 중첩으로 요소들 적용해보기 </h2>
         <p>오늘의 점심메뉴:제육덮밥</p>
+      
+
       </div>
 
       <div>
