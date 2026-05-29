@@ -39,7 +39,7 @@ function App() {
           Count is {count}
         </button>
       </section>
-c
+
       <div className="ticks"></div>
 
       <section id="next-steps">
